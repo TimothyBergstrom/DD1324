@@ -31,13 +31,13 @@ def fib_sequence_fast(n):
 start_time = time.time()
 found = fib_sequence(n)
 stop_time = time.time()
-print(f'It took {stop_time - start_time} seconds to run it')
+print(f'It took {round(stop_time - start_time, 4)} seconds to run it')
 print(found)
 
 start_time = time.clock() # PS: time.time() is not precise enough for very fast code snippets
 found = fib_sequence_fast(n)
 stop_time = time.clock()
 elapsed_time = (stop_time - start_time) * 1000 # time.clock() counts ms 
-print(f'It took {stop_time - start_time} seconds to run it with the fast algortithm')
+print('It took {:.4E} seconds to run it with the fast algortithm'.format(stop_time - start_time))
 print(found)
 
