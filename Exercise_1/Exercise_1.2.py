@@ -5,7 +5,8 @@ if not n.isdigit():
     print('Not a digit, quitting')
     quit()
 elif int(n) <= 0:
-    print('0 or less is not permitted') 
+    print('0 or less is not permitted')
+    quit()
 else:
     n = int(n)
 
