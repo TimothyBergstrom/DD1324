@@ -1,0 +1,15 @@
+# Variables
+# Make everything depend on headers, so if headers change, it will recompile everything
+SOURCE		= exercise7-4.c
+TARGET 		= exercise7-4
+CC			= gcc
+CFLAGS		= -Wall -g
+
+program: exercise7-4.c
+	$(CC) $(CFLAGS) $(SOURCE) -o $(TARGET)
+
+# clean all
+clean:
+	-rm $(TARGET)
+
+
