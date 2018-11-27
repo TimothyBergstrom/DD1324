@@ -60,14 +60,21 @@ int main(int argc, char** argv)
     printf("%d %ld\n", n, fib_fast(n)); 
     stop = clock();
     time_spent = (double)(stop - start) / CLOCKS_PER_SEC;
-    printf("%.6f seconds to run the fast function\n", time_spent);
+    printf("%.6e seconds to run the fast function\n", time_spent);
     
     /* The regular function is several times of magnitude faster than the python code:
-    Python: XX seconds
-    C: XX seconds
+    Python: 290.4 seconds
+    C: 5.37 seconds
+	
+	real    0m5.377s
+	user    0m5.375s
+	sys     0m0.000s
     
-    However, the "fast" function that I created was much faster on both
-    Python: XX seconds
-    C: XX seconds
+    However, the "fast" function that I created was much faster on both:
+    Python: 9.0352E-06 seconds
+    C: Could not measure, less than a millisecond (limit of clock function)
+	
+	Everything run on a i7-2600K
     */
+	return 0;
 }
