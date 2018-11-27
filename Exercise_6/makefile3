@@ -1,0 +1,15 @@
+# Variables
+# Make everything depend on headers, so if headers change, it will recompile everything
+SOURCE		= exercise6-3.c
+HEADERS 	= exercise6-3.h
+TARGET 		= exercise6-3
+CC			= gcc
+CFLAGS		= -Wall -g
+
+program: exercise6-3.c
+	$(CC) $(CFLAGS) $(SOURCE) -o $(TARGET)
+
+# clean all
+clean:
+	-rm $(TARGET)
+
